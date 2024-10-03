@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Little Lemon</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <meta name="author" content="Tony Zhang">
+    <meta name="description" content="Tony's first web page">
+    <meta name="keywords" content="Tong Zhang, sports, food, wine">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Our Menu">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="logo.png">
+    <meta property="og:url" content="https://littlelemon">
+    <meta property="og:description" content="Little lemon is a family-owned Mediterranean restaurant.">
+    <meta property="og;locale" content="en_US">
+    <meta property="og:site_name" content="Little Lemon">
+  </head>
+  
+  <body>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="location.html">Location</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="text-center">
+                        <h1>Book a Table</h1>
+                        <form method="POST">
+                            <div>
+                                <label for="booking_email">Email Address</label>
+                                <input type="email" id="booking_email" name="booking_email" required>
+                            </div>
+                            <div>
+                                <label for="booking_date">Booking Date</label>
+                                <input type="date" id="booking_date" name="booking_date">
+                            </div>
+                            <div>
+                                <label for="booking_time">Booking Time</label>
+                                <input type="time" id="booking_time" name="booking_time" min="10:00" max="20:00" value="19:00" step="60" required>
+                            </div>
+                            <div>
+                                <label for="booking_people">Number of People</label>
+                                <input type="range" id="booking_people" name="booking_people" min="1" max="10" value="4" oninput="this.nextElementSibling.value = this.value">
+                                <output>4</output>
+                            </div>
+                            <div>
+                                <label for="booking_location">Location</label>
+                                <input id="booking_location" name="booking_location" list="locations">
+                                <datalist id="locations">
+                                    <option>Downtown</option>
+                                    <option>Uptown</option>
+                                </datalist>
+                            </div>
+                            <div>
+                                <label>
+                                    <input type="checkbox" name="booking_agree_policy" id="booking_agree_policy" required>I agree to the cancellation policy
+                                </label>
+                            </div>
+                            <button type="submit">Book table</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <header>
+        <img src="logo.png">
+        </header>            
+        <footer>
+        <p>Copyright Little Lemon</p>
+        </footer>
+
+        <script src="bootstrap.bundle.min.js"></script>
+    </body>
+</html>
